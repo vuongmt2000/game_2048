@@ -5,7 +5,7 @@ import {
   Dimensions,
   StyleSheet,
   Text,
-  Button,
+  Alert,
 } from 'react-native';
 
 import GestureRecognizer, { swipeDirections } from 'react-native-swipe-gestures';
@@ -199,7 +199,11 @@ const App = () => {
       }
     }
     if (check_up === 15) {
-      alert(' bạn đã thua cuộc');
+      Alert.alert(
+      "Thông báo",
+      "Bạn đã thua cuộc! Mời bạn chơi lại.",
+      
+    );
     } else {
       check_up = 0;
     }
@@ -301,7 +305,11 @@ const App = () => {
       }
     }
     if (check_down == 15) {
-      alert(' bạn đã thua cuộc');
+      Alert.alert(
+      "Thông báo",
+      "Bạn đã thua cuộc! Mời bạn chơi lại.",
+      
+    );
     } else {
       check_down = 0;
     }
@@ -399,7 +407,11 @@ const App = () => {
       }
     }
     if (check_right === 15) {
-      alert(' bạn đã thua cuộc');
+      Alert.alert(
+      "Thông báo",
+      "Bạn đã thua cuộc! Mời bạn chơi lại.",
+      
+    );
     } else {
       check_right = 0;
     }
@@ -498,7 +510,11 @@ const App = () => {
     }
 
     if (check_left === 15) {
-      alert(' bạn đã thua cuộc');
+      Alert.alert(
+      "Thông báo",
+      "Bạn đã thua cuộc! Mời bạn chơi lại.",
+      
+    );
     } else {
       check_left = 0;
     }
@@ -524,11 +540,11 @@ const App = () => {
         <View style={styles.button_hear}>
           <View style={styles.button_}>
             <Text style={styles.title}>Điểm</Text>
-            <Text style={styles.number}>{score}</Text>
+            <Text style={[styles.number, {fontSize: heightScore > 100? 30: 40}]}>{score}</Text>
           </View>
           <View style={styles.button_}>
             <Text style={styles.title}>Điểm cao</Text>
-            <Text style={styles.number}>{heightScore}</Text>
+            <Text style={[styles.number, {fontSize: heightScore > 100? 30: 40}]}>{heightScore}</Text>
           </View>
         </View>
         <View style={styles.button_playAgain}>
@@ -703,7 +719,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   number: {
-    fontSize: 40,
     color: 'white',
     fontWeight: 'bold',
   },

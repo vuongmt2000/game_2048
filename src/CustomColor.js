@@ -26,7 +26,12 @@ function CustomColor(props) {
         width: 75,
         height: 75,
       }}>
-      <Text style={{fontSize: 40, color: 'black', fontWeight: 'bold'}}>
+      <Text
+        style={{
+          fontSize: so > 100 ? (so > 1000 ? 30 : 35) : 40,
+          color: 'black',
+          fontWeight: 'bold',
+        }}>
         {so}
       </Text>
     </View>
